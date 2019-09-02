@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.dept.on .dept-title{
+				color:red;
+			}
+			.dept-list{
+				display:none;
+			}
+			.dept-list.on {
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		
+			
+		<div class="dept">
+			<span class="dept-title">院系建设</span>
+			<ul class="dept-list">
+				<li>信息工程学院</li>
+				<li>土建院</li>
+				<li>理学院</li>
+			</ul>
+			
+		</div>
+		
+		<div class="dept">
+			<span class="dept-title">院系活动</span>
+			<ul class="dept-list">
+				<li>学生会</li>
+				<li>红十字会</li>
+				<li>班会</li>
+			</ul>
+			
+		</div>
+		
+		<div class="dept">	
+			<span class="dept-title">学校景点</span>
+			<ul class="dept-list">
+				<li>樱花园</li>
+				<li>田径场</li>
+			    <li>图书馆</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	
+//		
+////		方法3		
+//		$(".dept-title").click( function() { 
+//			 var parent=$(this).parent()
+//			if(parent.hasClass('on'))
+//			{
+//				parent.removeClass('on') ;
+////				 $(this).parent().next().slideUp()//向上收起
+//			}else
+//			{
+//				parent.addClass('on') ;
+//				parent.siblings().removeClass('on');
+//				parent.siblings().find('.dept-list').hide('slow')//缓慢淡回
+////			$(this).parent().find('.dept-list')  
+////          $(this).next().slideDown()//向下滑出
+//			}
+//			       $(this).next().Toggle('slow')
+////          })
+////		
+//	
+	
+	
+//		方法2		
+		$(".dept-title").click( function() { 
+			 var parent=$(this).parent()
+			if(parent.hasClass('on'))
+			{
+				parent.removeClass('on') ;
+//				 $(this).parent().next().slideUp()//向上收起
+			}else
+			{
+				parent.addClass('on') ;
+				parent.siblings().removeClass('on');
+				parent.siblings().find('.dept-list').fadeOut()//缓慢淡回
+//			$(this).parent().find('.dept-list')  
+//          $(this).next().slideDown()//向下滑出
+			}
+			       $(this).next().fadeToggle()
+            })
+	
+	
+		
+		
+		
+//		方法1
+//		$(".dept-title").click( function() { 
+//			 var parent=$(this).parent()
+//			if(parent.hasClass('on'))
+//			{
+//				parent.removeClass('on') ;
+////				 $(this).parent().next().slideUp()//向上收起
+//			}else
+//			{
+//				parent.addClass('on') ;
+//				parent.siblings().removeClass('on');
+//				parent.siblings().find('.dept-list').slideUp()
+////			$(this).parent().find('.dept-list')  
+////          $(this).next().slideDown()//向下滑出
+//			}
+//			       $(this).next().slideToggle(300)
+//          })
+////		  
+	
+
+
+		
+//		
+//	$(function() {      
+//		$(".dept").on("click", function() {        
+//			var next = $(this).children(".dept-list");               
+//			next.slideToggle('slow');  //再次点击收回          
+//			$('.dept-list').not(next).slideUp('slow'); //不是当前点击的内容全部向上收起    
+//			return false;      
+//		})    
+//	})
+			
+
+	</script>
+</html>

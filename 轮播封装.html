@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.out-cursoal{
+				width:780px;
+				height:306px;
+				position:relative;
+				left:40px;
+				border:1px solid black;
+				overflow: hidden;				
+			}
+			.iner-slide{
+				position:absolute;
+				left:-780px;
+				top:0;	
+				border:1px solid red;	
+				font-size: 0;		
+			}
+			.iner-img{
+				width:780px;
+				height:306px;
+			}
+			.bto{
+				position:absolute;
+				top:46%;
+				padding:5px 10px;
+				display: inline-block;
+				background:white;
+				color:black;
+
+			}
+			.zuo-bto{
+				left:0;	
+				
+			}
+			.you-bto{
+				right:0;
+			}
+			.carsoal-cicle{
+				position: absolute;
+				z-index: 11;
+				text-align:center;
+				left:50%;
+				bottom:20px;
+				margin-left:-176px;
+				
+			}
+			.carsoal-cicle li{
+				float:left;
+				display: inline-block;
+				width:26px;
+				height:26px;
+				background: rgba(0,0,0,0.5);
+				border-radius:50%;
+				line-height:26px;
+				margin-left:20px;		
+			}
+			.carsoal-cicle li.on{
+				background: rgba(255,255,255,0.5);
+			}
+		</style>
+	</head>
+	<body>
+
+		<!--定位盒子banner-cursoal-->
+		<div class="out-cursoal cursoal2">
+			<!--里面运动的盒子-->
+			<div class="iner-slide">
+				<!--内部图片-->
+				<img class="iner-img" src="img/7.jpg"/>
+				<img class="iner-img" src="img/6.jpg" />
+				<img class="iner-img" src="img/1.jpg" />
+				<img class="iner-img" src="img/2.jpg" />
+				<img class="iner-img" src="img/3.jpg" />
+				<img class="iner-img" src="img/7.jpg"/>
+				<img class="iner-img" src="img/6.jpg" />
+			</div>	
+			<!--左右按钮，定位-->
+			<span class="bto zuo-bto"><</span>
+			<span class="bto you-bto">></span>
+			<ul class="carsoal-cicle">
+	    			<li class="on">1</li>
+	    			<li>2</li>
+	    			<li>3</li>
+	    			<li>4</li>
+	    			<li>5</li>
+	    			<li>6</li>
+	    		</ul>
+		</div>
+		
+	</body>
+	<script src="js/轮播封装.js"></script>
+	<script>
+//	turnbox('.cursoal1');
+	turnbox('.cursoal2');
+	</script>
+	
+</html>

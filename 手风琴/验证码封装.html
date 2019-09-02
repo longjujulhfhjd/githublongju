@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+[name=yanzhengma]{
+	height:80px;
+	width: 190px;
+	display: inline-block;
+	
+}
+/*.yanzhengm{
+	border:1px solid #CCCCCC;
+	height:40px;
+	padding:2px 0;	
+}*/
+.yangzhengma-con{
+	border:0px;
+ 	font-size: 14px;
+ 	display: inline-block; 	
+ 	/*width: 83px;*/
+ 	padding:10px 15px;
+	height: 40px;
+	line-height: 40px;
+	/*border:1px solid #FF2D52;*/
+	margin-left:15px;
+	color:white;
+	text-align: center;
+	background: #FF2D52;
+    /*float:left;*/	
+    cursor: pointer;
+}
+.yangzhengma-con.disabled{
+	background: #999;
+	cursor:not-allowed;
+	
+}
+input:focus{
+	outline: none;
+}
+		</style>
+	</head>
+	<body>
+		<div class="yanzhengma clearfix">
+			<input  type="text" name="yanzhengma " placeholder="请输入验证码" />
+			<p  class=" yangzhengma-con  margin-left-10">获取验证码</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+	<script>
+		var cookia=$.cookie('cookiename')
+					console.log(cookia)
+		if(cookia){
+			countdown(cookia)
+			
+		}
+		
+		$('.yangzhengma-con').click(function(){
+			var _this=this;
+			if($(this).hasClass('disabled'))
+			return;
+			countdown(60)
+			
+		})
+		function countdown(count){
+		    $('.yangzhengma-con').addClass('disabled')
+//			 var count=60;
+			$('.yangzhengma-con').html(count+'s后重新获取')
+		var timer=setInterval(function(){
+				  count--;
+				  //设置cookie
+				$.cookie('cookiename',count)
+	        console.log($.cookie('cookiename'))
+				 $('.yangzhengma-con').html(count+'s后重新获取')
+				  if(count<1){
+				  	clearInterval(timer)
+				$('.yangzhengma-con').removeClass('disabled').html('重新获取验证码')
+
+				  }
+			},1000)	
+		}
+	</script>
+</html>

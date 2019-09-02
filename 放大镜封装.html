@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	.zoom-big{
+	position:absolute;
+	top:0;
+	right:-440px;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;	
+}
+.big-img{
+	position:relative;
+}
+.detile-img{
+	width: 400px;
+	height: 400px;
+}
+ .share-img1{
+ 	width:400px;
+ 	height:400px;
+ }
+  
+.jqroom{
+	position:relative;
+}
+		</style>
+	</head>
+	<body>
+		<div class="jqroom detile-img" >
+				<img class="share-img1 small-img" src="img/xiaoqiao2.jpg" />
+				<!--<div class="zoom-big">
+					<img class="big-img" src="img/w.jpg"/>
+				</div>-->
+			</div>
+	</body>
+	   <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	   <script src="js/放大镜封装.js"></script>
+	    <script>
+		 //放在旁边盒子的宽度
+  	 $('.jqroom').jqzoom({
+  	 	offwidth:200,
+  	 	offheight:200
+  	 })
+  </script>
+</html>

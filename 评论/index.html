@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ul >
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li style="visibility:hidden">4</li>
+		</ul>
+		
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		
+		$("li:first-child").css(
+			{
+				color:"red"
+			}
+		)
+		$("li:last-child").css(
+			{
+				color:"green"
+			}
+		)
+		$("li:nth-child(2)").css(
+			{
+				color:"purple"
+			}
+		)
+		console.log($(":hidden"))
+	
+	</script>
+</html>

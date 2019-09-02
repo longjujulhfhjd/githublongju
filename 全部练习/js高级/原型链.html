@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	function Dog(){
+		
+	}
+	var dog1=new Dog()
+	var dog2=new Dog()
+	function Cat(){
+		
+	}
+	Cat.prototype=new Dog()
+	console.log(Cat.prototype.__proto__.constructor)
+	//	console.log(Dog.prototype.constructor==Dog)
+	console.log(Cat.prototype.__proto__.constructor==Dog)
+	console.log(Cat.prototype.__proto__.constructor==Dog.prototype.constructor)
+	console.log(Cat.prototype.__proto__==Dog.prototype)
+</script>

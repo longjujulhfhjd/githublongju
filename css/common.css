@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	/*line-height: 1;*/
+}
+body{
+	font-size: 12px;
+	font-family:"微软雅黑",arial;
+    color: #000000;
+}
+
+li{
+
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+:focus {
+	outline:none;  
+}
+ .content{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+

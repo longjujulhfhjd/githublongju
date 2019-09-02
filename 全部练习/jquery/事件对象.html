@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box2{
+				width: 800px;
+				height: 800px;
+				background:#e2e2e2;
+				
+			}
+			.box3{
+				width: 100px;
+				height: 100px;
+				background:green;
+				position:relative;
+				
+			}
+			.scroll{
+				height: 1200px;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="scroll">
+			<div class="box2">
+				<div class="box3">
+					
+				</div>
+				
+		    </div>
+		    <button class="button1">获取鼠标的位置</button>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(".button1").click(function(event){
+			console.log('pageX:'+event.pageX)
+			console.log('pageY:'+event.pageY)
+			console.log('offsetX:'+event.offsetX)
+			console.log('offsetY:'+event.offsetY)
+			console.log('clientX:'+event.clientX)
+			console.log('clientY:'+event.clientY)
+		})
+			
+
+	</script>
+</html>

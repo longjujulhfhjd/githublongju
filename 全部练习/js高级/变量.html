@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		var a=1
+		var b=a
+		var obj={
+			name:'longju',
+			age:18
+		}
+	
+		var obj1=obj
+		
+//		    console.log(a,b,obj1,obj)
+		    
+		function fn(c){
+//			console.log(a,c)
+		}
+		fn(4);
+		function fn1(c){
+			obj.age=20
+			console.log(obj,c)
+		}
+		fn(obj1);
+        console.log(obj,c)
+	</script>
+</html>

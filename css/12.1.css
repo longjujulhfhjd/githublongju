@@ -1,0 +1,151 @@
+.stepnum{
+	height:35px;
+	width: 35px;
+	border-radius: 50%;
+	text-align: center;
+	background: #CCCCCC;
+	
+}
+.stepnum:hover,.stepnum.on{
+	background: #ffc0cb;
+	
+}
+
+.step-in{
+	height:25px;
+	width: 25px;
+	border-radius: 50%;
+	line-height: 24px;
+	vertical-align:-6px;;
+	margin-top:5px;;
+	text-align: center;
+	color:white;
+	background: #CCCCCC;
+	display: inline-block;
+}
+.xiantiao{
+    margin-top: 12px;
+	width:215px;
+	height:3px;
+	display: inline-block;
+	border:1px solid #e2e2e2;
+	background: #e2e2e2;	
+}
+.stepnum:hover .step-in,.step-in.on{
+	background: #FF2D52;
+}
+.shuoming-id.on{
+	color:#FF2D52;
+	
+}
+.fondstep{
+	height:550px;
+}
+.fondstep .content{
+	position:relative;	
+}
+.fondstep-posi{
+	position:absolute;
+	top:190px;
+	left:490px;
+	display: inline-block;	
+}
+[name=telnumber]{
+	border:0px;
+ 	font-size:14px;
+ 	width: 305px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #E2E2E2;	
+	margin-left: 15px;
+	display: inline-block;
+}
+[name=yz-newpassword]{
+	border:0px;
+ 	font-size:14px;
+ 	width: 305px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #E2E2E2;	
+	margin-left: 25px;
+	display: inline-block;
+}
+
+
+.yz-id{	
+	margin-top: 80px;
+	display: none;
+}
+.yz-id.on{	
+	display: block;
+}
+.yz-success{
+	display: none;
+	margin-top: 80px;	
+}
+.yz-success.on{
+	display: block;
+}
+.yz-password{
+	margin-top:80px;
+	display: none;
+}
+.yz-password.on{
+	display: block;
+}
+
+
+[name=yanzhengma]{
+	border:0px;
+ 	font-size: 14px;
+ 	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #E2E2E2;
+	margin-left: 15px;
+}
+[name=yz-repassword]{
+	border:0px;
+ 	font-size: 14px;
+	width: 305px;
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #E2E2E2;
+	margin-left: 15px;
+}
+.nextstep{
+    display: inline-block;
+    margin-left:60px;
+	width: 305px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	background: #FF2D52;
+	color: white;
+}
+.alerttel{
+	display: none;
+}
+.alerttel.on{
+	display: block;
+}
+.fondstep-Con li{
+	float:left;
+	padding-right:180px;
+}
+.alertpass{
+	display: none;
+}
+.alertpass.on{
+	display: block;
+}
+.quest-replace{
+    display: inline-block;
+    margin-left:60px;
+	width: 305px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	background: #FF2D52;
+	color: white;
+}

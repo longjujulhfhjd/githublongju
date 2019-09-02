@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 800px;
+				height: 800px;
+				background:#e2e2e2;
+				
+			}
+			.move{
+				width: 100px;
+				height: 100px;
+				background:green;
+				position:relative;
+				
+			}			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+				<div class="move">
+					
+				</div>
+				
+		    </div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(".box").mousemove(function(event){	
+		//获取相对于页面的位置	
+        var pageX=event.pageX	
+        var pageY=event.pageY
+        //鼠标对于当前元素的距离
+		var offsetX=$('.box').offset().left//父级根据body定位,上边定位
+		var offsetY=$('.box').offset().top//父级根据body定位	
+		//获取移动盒子的宽高
+		var moveheight=$('.move').outerHeight()
+		var movewidth=$('.move').outerWidth()
+		//获取box盒子的宽高
+		var boxheight=$('.box').outerHeight()
+		var boxwidth=$('.box').outerWidth()
+		//计算鼠标的中心位置
+		 var positionX=pageX-offsetX- moveheight/2
+		 var positionY=pageY-offsetY-movewidth/2
+		 //判断左边上边不让其移出盒子
+		  positionX=positionX>0 ? positionX:0
+		  positionY=positionY>0 ? positionY:0
+//		  //判断右边下边不让其移出盒子
+		  positionX=positionX > (boxwidth-movewidth) ? boxwidth - movewidth : positionX
+		  positionY=positionY > (boxheight-moveheight) ? boxheight - moveheight : positionY
+//        positionX=positionX > boxwidth ? boxwidth : positionX
+//		  positionY=positionY >boxheight ? boxheight: positionY
+
+		$(".move").css({
+			left: positionX,
+			top:positionY
+		              })	
+		})
+	</script>
+
+
+
+</html>

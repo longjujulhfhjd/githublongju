@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	let x=1
+	let obj={
+		x:x,
+		aa:function(){
+			console.log(this.x)
+		},
+		x1:'lqdiugv'
+	}
+	// 属性名和值一样时，可以只写属性名
+	//属性方法可以省略不写
+	//this当前这个对象
+	let obj1={
+		x,
+		aa(){
+			console.log(this)
+		}
+	}
+	obj.aa()
+	obj1.aa()
+//	var c='x'
+//	var x1;
+//	console.log(obj[c+'1'])
+	
+//	function aa(){
+//		return 'x1'
+//	}
+//	console.log(obj[aa()])
+console.log(obj.x.name)
+//Object.getOwnPropertyDescriptor获取属性描述
+var obj2={
+	a:1,
+	get foo(){
+		return this.a
+	},
+	set foo(value){
+		this.a=value
+	}
+}
+var ss=Object.getOwnPropertyDescriptor(obj2,'foo')
+console.log(ss.get.name)
+//对象的扩展
+let {f,g,...h}={f:1,g:2,h:3,x:4}
+console.log(h)
+let {f1,g1,...h}={f:1,g:2,h:3,x:4}
+</script>

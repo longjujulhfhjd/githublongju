@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			.margin-top-10{
+				margin-top:10px;
+			}
+			.margin-top-20{
+				margin-top:20px;
+			}
+			.margin-left-10{
+				margin-left:13px;
+			}
+			.alert{
+					padding:5px 20px;
+					display: inline-block;
+					font-size: 14px;
+					border-radius:5px;
+					position: absolute;
+				
+			}
+			.alert-info{
+			    color:#3c763d;
+			    border:1px solid greenyellow;
+				background: #dff0d8;
+					top:20%;
+			}
+			.alert-info:after{
+				background: #3c763d;
+			    border:1px solid  #3c763d;
+			   
+			}
+			.alert-warning{
+			    color:#8a6d3b;
+			    border:1px solid #faebcc;
+				background:#fcf8e3;
+					top:30%;
+			}
+			.alert-error{
+			    color:#a94442;
+			    border:1px solid #ebccd1;
+				background: #f2dede;
+					top:25%;
+			}
+			.denglu-quest{
+				padding: 20px 50px;
+				background: #B3D4FC;
+				text-align: center;
+				display: inline-block;
+				border-radius: 6px;
+				
+			}
+			.fontcolor-blue{
+				color:blue;
+			}
+		</style>
+	</head>
+	
+	    <!--<div class="alert alert-info">信息提示</div>
+	    <div class="alert alert-warning">警告提示</div>
+	    <div class="alert alert-erorr">错误提示</div>-->
+		<div>
+			<span class="margin-top-20 fontcolor-blue">登&nbsp;&nbsp;&nbsp;录</span>
+			<div class="margin-top-20">
+				<span>用户名：</span>
+				<input type="text" name="telname"/>
+			</div>
+			<div class="margin-top-20">
+				<span>密码：</span>
+				<input class="margin-left-10" type="password" name="password"/>
+			</div>
+			<p class="margin-top-20 denglu-quest ">立即登录</p>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/提示框封装.js" ></script>
+	<script>
+		$('.denglu-quest').click(function(){
+			var telreg=/^1[3,4,5,7,8][0-9]{9}$/; 
+			var tel=$('[name=telname]').val()
+			if(!telreg.test(tel)){
+				$.tooltip({
+              	type:'error',
+              	content:'请输入正确的电话号码'
+              })
+				return;
+			}
+			var passd=$('[name=password]').val()
+				var passdreg=/^(?![A-Z]+$)(?![a-z]+$)(?!\d+$)\S{6,16}$/; 
+//				var telpassword=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/; 
+			if(!passdreg.test(passd)){			
+				$.tooltip({
+              	type:'error',
+              	content:'请输入正确的密码'
+              })
+				return;
+			}
+			$.tooltip({
+              	type:'info',
+              	content:'登录成功',
+//            	interval:1500,
+              	success:function(){
+					window.location.href='12.0.html'
+	              		
+	              	  }
+              	})
+
+		})
+
+</script>
+</html>
+<!--A-Z+$ 从当前位置到结尾全是大写字母 
+!A-Z+$ 匹配不全是大写字母组成的字符串 
+（?![A-Z+$]） 如果从当前匹配位置开始到结尾是一个不全是大写字母组成的字符串，就匹配它，否则匹配位置保持不变，执行接下来的匹配表达式。 
+\S{8,}匹配任何可见字符组成的字符串，并且长度不小于8。-->

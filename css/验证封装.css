@@ -1,0 +1,21 @@
+.alertAll{
+	position:relative;	
+}
+label.error{
+	position:absolute;
+	top:-43px;
+	left:0;
+	color:red;
+}
+.clock-password{
+	
+}
+
+.tel-clock{
+	position:absolute;
+	top:-40px;
+	left:0;
+}
+input:focus{
+	outline: none;
+}

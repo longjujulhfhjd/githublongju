@@ -1,0 +1,196 @@
+.naozhong{
+    width: 100%;
+	background:#ff595d;
+	height:80px;
+    text-align: center;
+    position: relative;
+}
+.naozhong-position{
+	position:absolute;
+	top:20px;
+	right:39%;
+}
+.naozhong img{
+	display: inline-block;
+}
+.nowdaybuy{
+	height: 310px;
+	background:#fbdfb8;
+	width: 100%;
+	position: relative;	
+}
+.nowdaybuy-lits{
+	position:absolute;
+	top:50px;
+	left:23%;
+	font-size:0;
+	
+}
+
+.borders{
+	border-bottom: 2px solid black;
+	width:40px;
+	height:2px;
+	padding-top:7px;
+}
+.nan{
+	color:#aea089;
+	
+}
+.nowbuy{
+	margin-top:10px;
+	padding:3px 15px;
+	border:1px solid #000000;
+	width: 113px;;
+}
+.nowbuy:hover{
+	border:1px solid #FF2D52;
+	color: #FF2D52;
+}
+.now img{
+	width: 200px;
+	height:200px;
+	padding-left:50px;
+}
+.now{
+	width: 800px;
+	display: inline-block;
+}
+.timebuy{
+	height:60px;
+	background: #343434;
+}
+.timebuy-lists{
+	height:60px;
+	width: 20%;
+	text-align: center;
+	position: relative;
+	
+}
+.timebuy-list .count-down{
+	color:#5a5b5b;
+}
+.timeby-position{
+	position: absolute;
+	top:0;
+	left:0;
+	width:230px;
+	height:60px;
+	padding-left:40px;
+	background: #121212;
+	padding-top:20px;
+	display: none;
+}
+.colorr{
+	color:#6f7070;
+}
+.timebuy-lists:hover  .timeby-position{
+	display: block;
+}
+.mybuy-list{
+	width: 100%;
+	
+}
+.mybuy-list li{
+	width:210px;
+	border:1px solid #E2E2E2;
+	margin-right:20px;
+}
+.mybuy-list li img{
+	width: 210px;
+	height:210px;
+}
+.mybuy-list-con{
+	height:40px;
+	width:208px;
+	margin-top:10px;
+}
+.mybuy-list-conleft{
+	color:white;
+	width:150px;
+	background: #FF2D52;
+	height:40px;
+	line-height:45px;
+}
+.mybuy-list-conleft1{
+	width:150px;
+	height:40px;
+}
+.mybuy-list-conright{
+	width:58px;
+	height:40px;
+	border:2px solid #FF2D52;
+	color:#FF2D52;
+	text-align: center;
+	line-height:40px;
+	
+}
+.mybuy-list-conright1{
+	width:58px;
+	height:40px;
+	border:2px solid #999999;
+
+	text-align: center;
+	line-height:40px;
+	
+}
+.mybuy-bottom-list{
+	padding:10px 10px;
+	text-align: center;
+	width: 130px;
+	height:35px;
+	color:white;
+	background:  #CCCCCC;
+	
+}
+.mybuy-bottom-list:hover{
+	background:#666666;
+}
+.mybuy-bottom-list {
+	position: absolute;
+	top:0px;
+	
+}
+.mybuy-bottom-pos{
+	position:relative;
+	height:30px;
+}
+.list-sq2 {
+	right:30%;
+}
+.list-sq1 {
+	left:30%;
+}
+.covergray{
+	position:absolute;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.3);
+	width: 210px;
+	height:305px;
+}
+.covergray-list{
+	position:absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+.over{
+	position: absolute;
+	top:25%;
+	left:30%;
+	border-radius: 50%;
+	background: #949494;
+	color:white;
+	width:75px;
+	height:80px;
+	text-align: center;
+	line-height: 80px;
+	
+}
+.bigdiav{
+	position: relative;
+}
+.bigdiav:hover .covergray-list{
+	display: block;
+}

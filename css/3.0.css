@@ -1,0 +1,139 @@
+
+.nowbuy{
+	border:1px solid #AEA089;
+	width:113px;
+}
+.nowdaybuy-bg{
+	background:#d7e8e0;
+}
+.titlenav-list li{
+	padding:20px 0;
+	background: #fff9f5;
+	float:left;
+	padding-right:29px;
+}
+.titlenav-list li:last-child{
+		padding-right:0;
+}
+.titlenav-list li:hover{
+	color:#FF2D52;
+	
+}
+.sort{
+	background: #ededed;
+	height:40px;
+	width: 100%;
+	
+}
+.sort-list{
+	height:26px;
+	display: inline-block;
+	line-height: 26px;
+	margin-top:10px;
+}
+.sort-list li{
+	display: inline-block;
+	float:left;
+	padding:0 10px;
+	color:#aeadad;
+}
+.sort-list .sort-lists:hover{
+	color:#FF2D52;
+}
+.sort-lists-one:hover{
+	color:white;
+	background: #FF2D52;
+}
+.input-ser input{
+	display: inline-block;
+	
+}
+.progress{
+	width: 60px;
+	height:8px;
+	border:1px solid #FF2D52;
+	border-radius:4px;
+	display:inline-block;
+}
+ .progress-box{
+	width:50%;
+	background:#FF2D52;
+	height:100%;
+	
+}
+.progress-text{
+	color: #FF2D52;
+	
+}
+.all-buy{
+	width: 230px;
+	height: 40px;
+	position:absolute;
+	bottom:0;
+	left:0px;
+	background: #FF2D52;
+	color:white;
+	line-height: 40px;
+	display: none;
+	
+}
+.like-list-paddingone{
+	position: relative;
+}
+.textheight{
+	height:40px;
+}
+
+.like .like-list{
+	height:395px
+}
+.like-list-paddingone:hover .all-buy{
+		display: block;
+}
+
+.like-list-paddingone{
+	padding:7px 7px;
+	width:232px;
+	height:355px;	
+border:1px solid #E2E2E2;
+	
+	
+}
+.like-list-paddingone:hover {
+border:1px solid #FF2D52;
+}
+.covergray{
+	position:absolute;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.3);
+	width: 210px;
+	height:305px;
+}
+.covergray-list{
+	position:absolute;
+    top:0;
+    left:0;
+
+}
+.gameover{
+	position:absolute;
+	top:50%;
+	margin-top:-42px;
+	left:50%;
+    margin-left:-42px;
+	height:85px;
+	width: 85px;
+	background: rgba(0,0,0,0.3);
+	line-height: 85px;
+	border-radius: 50%;
+	text-align: center;
+}
+.gameover-over{
+	position:absolute;
+    top:0;
+    left:0;
+    width:232px;
+	height:355px;
+	background: rgba(0,0,0,0.3);
+}

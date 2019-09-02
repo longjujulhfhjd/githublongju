@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<div class="protected">arfghrsmy</div><div>ruier68o</div>-->
+		<ul>
+		  <li><strong>list</strong> item 1 - one strong tag</li>
+		  <li><strong>list</strong> item <strong>2</strong> - two <span>strong tags</span></li>
+		  <li>list item 3</li>
+		</ul>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+//		$("div").click(function(){
+//   if ( $(this).hasClass("protected") )
+//    $(this)
+//    .animate({ left: -10 })
+//    .animate({ left: 10 })
+//    .animate({ left: -10 })
+//    .animate({ left: 10 })
+//    .animate({ left: 0 });
+//});
+//	
+$("li").click(function() {
+  var $li = $(this),
+    isWithTwo = $li.is(function() {
+      return $('strong', this).length === 2;
+    });
+  if ( isWithTwo ) {
+    $li.css("background-color", "green");
+  } else {
+    $li.css("background-color", "red");
+  }
+});
+	</script>
+	
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/fengzhuang.css"/>
+		<link rel="stylesheet" type="text/css" href="css/12.0.css"/>
+		<link rel="stylesheet" type="text/css" href="css/验证封装.css"/>
+		<style>
+			body{
+				background: rgba(225,225,225,0.3);
+			}
+		</style>
+	</head>
+	<body>
+		 <!--用户登录-->
+	   <div class="denglu margin-top-20 clearfix">
+			<div class="content">
+				<form class="validateform">
+					<div class="zhuce-box clearfix on">
+						<div class="zhuce-title clearfix">
+							<span class="float-left fontsize-18 fontcolor-gray">注册账户</span>
+							<span class=" denglu-box-more float-right bgcolor-main <fontsize-16></fontsize-16> fontcolor-white ">></span>
+							<span class="float-right denglubto fontcolor-main">立即登录</span>
+							<span class="float-right">已有账号？</span>
+						</div>	
+					<p class="denglu-clock">请输入正确的电话号码？且为11位纯数字格式</p>	
+						<div class="alertAll">
+							<input class="input-box" type="text" name="zcused" id="zcused" placeholder="请输入用户名" />
+						</div>
+						<div class="zhuce-password margin-top-10 alertAll">
+							<input class="input-box" type="text" name="zcpassword" id="zcpassword" placeholder="请输入一个密码，最少为6个人字符" />
+						</div>
+						<div class="zhuce-passwords margin-top-10 alertAll">
+							<input class="input-box" type="text" name="zcpasswords" id="zcpasswords" placeholder="请确认密码" />
+						</div>
+						<div class=" margin-top-10 alertAll">
+							<input class="input-box" type="text" name="zcid" id="zcid" placeholder="请输入身份证号" />
+						</div>
+						<div class="tel margin-top-10 alertAll">
+							<input class="input-box" type="text" name="mobile" id="mobile" placeholder="请输入你的手机号" />
+						</div>
+						<!--<div class="yanzhengma alertAll margin-top-30 clearfix">	
+							<p class="lineheight-20 tel-clock fontsize-14 fontcolor-gray">建议使用常用的手机号</p>
+							<input class="float-left" type="text" name="yanzhengma" placeholder="请输入验证码" />
+							<p class="float-left yangzhengma-con display-block margin-left-10">获取验证码</p>
+						</div>-->
+						
+						<div class=" margin-top-10 alertAll">
+							<input class="input-box" type="text" name="email" id="email" placeholder="请输入邮箱账号" />
+						</div>
+						
+	
+						
+						<p class="zhuce-con margin-top-10 fontsize-16">立即注册</p>
+					</div>
+				</form>
+			</div>  	
+	   </div>   
+	    	
+	</body>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery.validate.js" ></script>
+		<script>
+			$.extend($.validator,{
+				messages: {
+							required: "该字段不能为空.",
+							remote: "Please fix this field.",
+							email: "请输入正确的邮箱.",//邮箱
+							url: "请输入正确的地址.",
+							date: "Please enter a valid date.",
+							dateISO: "Please enter a valid date (ISO).",
+							number: "Please enter a valid number.",
+							digits: "Please enter only digits.",//只能输入数字
+							equalTo: "请再次输入密码1.",//密码比较
+							maxlength: $.validator.format( "Please enter no more than {0} characters." ),
+							minlength: $.validator.format( "Please enter at least {0} characters." ),
+						    rangelength: $.validator.format( "请输入6-18位字符." ),
+                            range: $.validator.format( "Please enter a value between {0} and {1}." ),
+							max: $.validator.format( "Please enter a value less than or equal to {0}." ),
+							min: $.validator.format( "Please enter a value greater than or equal to {0}." ),
+							step: $.validator.format( "Please enter a multiple of {0}." )
+						},
+			});
+			$('.validateform').validate({
+				rules:{//验证规则
+					email:{
+						required:true,
+						email:true
+					},
+					zcpassword:{
+						required:true,
+						rangelength:[6,18]
+					},
+					zcpasswords:{
+						equalTo:$('[name=zcpassword]')
+					},mobile:{
+						required:true,
+						tel:true
+					},zcid:{
+						required:true,
+						idnum:true
+					},zcused:{
+						required:true,
+						username:true
+					}
+				},
+				messages: {//定义错误信息
+					email:{
+						required:'邮箱不能为空'
+					},
+					zcpassword:{
+						required:'密码不能为空'
+					},
+					zcpasswords:{
+                    	 required:'再次输入密码错误'						
+					},mobile:{
+						required:'手机号不能为空'
+					},zcid:{
+						required:'身份证不能为空'
+					},zcused:{
+						required:'用户名不能为空'
+					}
+				}
+			})
+		    //自定义验证 $.validator.addMethod(验证名字,验证方法,验证错误信息)
+		    $.validator.addMethod('tel',function(value,element){
+		    	var regtel=/^1[356789]\d{9}$/
+		    	if(regtel.test(value)){
+		    		return true;
+		    	}
+		    		return false;
+		    },'请输入正确的手机号')
+		     $.validator.addMethod('idnum',function(value,element){
+		    var regid=/^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
+		    		return regid.test(value)
+		    },'请输入正确格式的身份证号')
+		      $.validator.addMethod('username',function(value,element){
+		    var reguser=/^[a-zA-Z]\w{3,15}$/ig;
+		    		return reguser.test(value)
+		    },'请输入正确格式，文明的用户名')
+		        // /^[a-zA-Z]\w{3,15}$/ig
+				//·由字母a～z(不区分大小写)、数字0～9、点、减号或下划线组成
+				//·只能以字母开头，包含字符 数字 下划线，例如：beijing.2008
+				//·用户名长度为4～18个字符
+		</script>
+</html>

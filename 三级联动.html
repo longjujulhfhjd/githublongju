@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+	</head>
+	<body>
+		 <!--data-province="贵州省" 默认选择贵州省，没有前面的横线-->
+		  <!--data-province="---选择省---" 修改顶上第一行的说明-->
+		  <!--id="distpicker" 默认是一个地区选择-->
+		  <!--data-toggle="distpicker" 就不用去调用-->
+		  <!--if是id="distpicker" 则需要$("#distpicker").distpicker()-->
+		  <!--if是class="distpicker" 则需要$(".distpicker").distpicker()-->
+		      <!--autoSelect:false 阻止默认选择，设置为空-->
+		      <!--Destroy 阻止初始化选择的效果，设为默认选择-->
+		  <form class="form-inline">
+        <div data-toggle="distpicker">
+          <div class="form-group">
+            <label class="sr-only" for="province">Province</label>
+            <select data-province="---选择省---" class="form-control" id="province"></select>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="city">City</label>
+            <select data-city="---选择市---" class="form-control" id="city"></select>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="district">District</label>
+            <select data-district="---选择区---" class="form-control" id="district"></select>
+          </div>
+          <!--<div class="form-group">
+            <button class="btn btn-primary" class="reset" type="button">Reset</button>
+            <button class="btn btn-warning" class="reset-deep" type="button">Reset (deep)</button>
+            <button class="btn btn-danger" class="destroy" type="button">Destroy</button>
+          </div>-->
+        </div>
+      </form>
+      
+      
+      
+      <div class="distpicker">
+      	    <select></select>
+      	    <select></select>
+      	    <select></select>
+      	    <button class="btn btn-primary" id="reset" type="button">重置</button>
+            <button class="btn btn-warning" id="reset-deep" type="button">重置(deep)</button>
+            <button class="btn btn-danger" id="destroy" type="button">Destroy</button>
+      </div>
+	</body>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script src="js/三级联动/distpicker.data.js"></script>
+	<script src="js/三级联动/distpicker.js"></script>
+	<script>
+		$(".distpicker").distpicker({
+			province:'贵州省',
+//			city:'毕节市',
+//			district:'纳雍县'
+//            autoSelect:false
+
+		})
+		  $('#reset').click(function () {
+		      $(".distpicker").distpicker('reset');
+		  });
+		
+		  $('#reset-deep').click(function () {
+		      $(".distpicker").distpicker('reset', true);
+		  });
+		
+		  $('#destroy').click(function () {
+		      $(".distpicker").distpicker('destroy');
+		  });
+	</script>
+</html>

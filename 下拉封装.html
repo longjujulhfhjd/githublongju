@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="ziti/xiangxiajiantou/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fengzhuang.css"/>
+		<style>
+			*{
+				padding:0;
+				margin: 0;
+			}
+			li{
+				list-style: none;
+				background: #F1F1F1;
+			}
+			input{
+				border:none;				
+				display: inline-block;
+				
+			}
+			input:focus{
+				outline: none;
+			}
+			.select-box{
+				width: 200px;
+			}
+			
+			.select-title{
+				border:1px solid #CCCCCC;
+			}
+			
+			.select-lists{
+				display:none;
+				border:1px solid #CCCCCC;
+				border-top:0;
+			}
+			.select-lists.show{
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="select-box">
+			<div class="select-title">
+				<input type="text" class="select-input"  readonly="readonly" value="1"/>
+				<span class="iconfont icon-xiangxia2"></span>
+			</div>
+			<ul class="select-lists">
+				<li class="select-list">1</li>
+				<li class="select-list">2</li>
+				<li class="select-list">3</li>
+				<li class="select-list">4</li>
+			</ul>			
+		</div>
+		<div class="select-box margin-top-10">
+			<div class="select-title">
+				<input type="text"  class="select-input"   readonly="readonly" value="1"/>
+				<span class="iconfont icon-xiangxia2"></span>
+			</div>
+			<ul class="select-lists">
+				<li class="select-list">1</li>
+				<li class="select-list">2</li>
+				<li class="select-list">3</li>
+				<li class="select-list">4</li>
+			</ul>			
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/下拉列表封装.js" type="text/javascript" charset="utf-8"></script>
+   <script>
+    	$('.select-box').select()
+    </script>
+</html>

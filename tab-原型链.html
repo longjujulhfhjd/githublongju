@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.tab-title{
+				border:1px solid #E2E2E2;
+				background: #E2E2E2;
+				color:black;
+			}
+			.tab-title.active{
+				border:1px solid #FF2D52;
+				background: #FF2D52;
+				color: #FFFFFF;
+			}
+			.lists-tab{
+				width: 200px;
+				height:200px;
+				border:1px solid #E2E2E2;
+				display: none;
+			}
+			.lists-tab.active{
+				display: block
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="tabtitle">
+				<button  class="tab-title title-one active">按钮1</button>
+				<button  class="tab-title title-two">按钮2</button>
+				<button  class="tab-title title-three">按钮3</button>				
+			</div>
+			<div class="tab-list">
+				<div class="lists-tab active">1</div>
+				<div class="lists-tab">2</div>
+				<div class="lists-tab">3</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/原型链_tab.js"></script>
+	<script>
+		new tabexp({
+			box:'.box'
+		})
+	</script>
+</html>

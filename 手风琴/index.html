@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="dept">
+			<span>院系建设</span>
+			<p class="dept-list">信息工程学院</p>
+			<p class="dept-list">土建院</p>
+			<p class="dept-list">理学院</p>
+		</div>
+		<div class="huodong">
+			<span>院系活动</span>
+			<p class="huodong-list">学生会</p>
+			<p class="huodong-list">红十字会</p>
+			<p class="huodong-list">班会</p>
+		</div>
+		<div class="xuexiao">
+			<span>学校景点</span>
+			<p class="xuexiao-list">樱花园</p>
+			<p class="xuexiao-list">田径场</p>
+			<p class="xuexiao-list">图书馆</p>
+		</div>
+		
+	</body>
+	<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	window.onload=function(){
+		$("p").slideUp("slow"); 
+		var dept=$('.dept')
+		dept.click(function(){
+			$("p").slideUp("slow");
+			$(".dept-list").slideDown('slow')
+		})
+		var huodong=$('.huodong')
+		huodong.click(function(){
+			$("p").slideUp("slow");
+			$(".huodong-list").slideDown('slow')
+		})
+		var xuexiao=$('.xuexiao')
+		xuexiao.click(function(){
+			$("p").slideUp("slow");
+			$(".xuexiao-list").slideDown('slow')
+		})
+	}
+			
+
+	</script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.goodlist{
+				
+			}
+			.goodlist:after{
+				content: "";
+				display:block;
+				clear: both;
+			}
+			.goodlist li{
+				float:left;
+				text-align: center;	
+				width: 20%;	
+				list-style: none;
+				/*border:1px solid #E2E2E2;*/					
+			}
+			.goodlist li img{
+				max-width: 100%;
+			}
+			.pages{
+				
+				text-align: center;	
+			}
+			.pagea{
+				margin:5px;	
+				text-decoration: none;
+						
+				padding:5px 10px;
+				background: #E2E2E2;				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<ul class="goodlist ">
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>
+				<li>
+					<img src="img/goods.jpg" />
+					<p>商品标题</p>
+					<p>价格</p>
+				</li>				
+			</ul>
+			<div class="pages">
+				<a class="page-bto pagea pre">上一页</a>
+				<!--<a>1</a>
+				<a>2</a>
+				<a>3</a>
+				<a>4</a>
+				<a>5</a>-->
+				<a class="page-bto pagea next">下一页</a>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js"></script>
+		<script>		
+	    var page=getpages('page')||1
+		var count= getpages('count')||2
+		var total=0
+		 console.log(page,count)
+		 //存储地址
+		 var request='http://192.168.97.231:3003/'
+		 	//请求数据
+		 	$.ajax({
+		 		type:'get',
+		 		url:request+'list',
+		 		async:true,
+		 		data:{
+		 			page:page,
+		 			count:count
+		 		},success:function(res){
+		 			var	pagehtml=''
+		 			//找到页码总数
+		 			for(var i=0;i<res.total;i++){
+		 			pagehtml += `<a class="pagea" href="翻页.html?page=${i+1}&count=${count}">${i+1}</a>`
+		 			}
+		 			console.log(pagehtml)
+		 			$('.pages a:first').after(pagehtml)
+		 		}
+		 	})
+         //	    点击上一步下一步按钮
+         $(".page-bto").click(function(){
+         	 if(page<=1 && $(this).hasClass('pre')){
+         	 	return;
+         	 }
+         	 if(page>=total && $(this).hasClass('next'))
+         	 {
+         	 	return;
+         	 }
+         	 if($(this).hasClass('pre')){
+         	 	page--
+         	 }else{
+         	 	page++
+         	 }
+         	
+         	 window.location.href='翻页.html?page='+page+'&count='+count;
+         })
+		function getpages(name){
+			//从当前地址上获取地址
+			var search=window.location.search
+			console.log(window.location)
+			//截取字符不要？
+			search=search.substr(1)
+			var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)")
+			//从一个字符串中匹配与正则相符的字符串
+			var match=search.match(reg)
+			if(match){
+				return match[2]
+			}
+			return ''
+		}
+		</script>
+</html>

@@ -1,0 +1,41 @@
+.shopguide{
+	width: 100%;
+}
+.shopguide-left{
+	width: 220px;
+	border:1px solid #E2E2E2;
+}
+
+.shopguide-title-con{
+	padding:0 20px;
+	line-height:50px;
+	height:50px;
+
+}
+.shopguide-left-list{
+	border:1px solid #E2E2E2;
+	height:120px;
+	padding:15px 20px;
+    display:none;
+    
+	
+}
+.shopguide-left-list li{
+	list-style:none;
+    line-height:35px;
+}
+.shopguide-left-list li:hover{
+	color:#FF2D52;
+	
+}
+.shopguide-right{
+	border:1px solid #E2E2E2;
+	padding:0 20px;
+	
+	width: 940px;
+}
+.shopguide-righttit{
+	border-bottom: 1px dashed #E2E2E2;
+	height:60px;
+	line-height: 60px;
+}

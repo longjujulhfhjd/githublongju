@@ -1,0 +1,269 @@
+.real-idimg{
+	width: 100%;
+}
+
+.bottom-bto{
+	padding:10px 20px;
+	background: #FF2D52;
+	color:white;
+	display: inline-block;
+	border-radius: 6px;
+	font-size: 14px;
+}
+.img-zf{
+	width: 100%;
+}
+.percenter-right {
+	display: none;
+}
+
+.percenter-left{
+	width: 230px;
+	
+}
+.alert-con{
+   padding-left:80px;
+}
+.img-zheng {
+	padding-left:140px;
+}
+.percenter-left{
+	border:2px solid #e2e2e2;
+	border-right:0;
+}
+
+.percenter-left-title{
+	height:60px; 
+	width: 100%;
+	background:#fff9f5;
+	padding:20px 18px;
+	border-bottom:1px solid #e2e2e2;
+	border-top:0;	
+}
+
+
+.percenter-left-content .num1{
+	width: 14px;
+	height:14px;
+	line-height: 14px;
+	text-align: center;
+}
+.percenter-left-content .percenter-left-contents{
+	border-bottom: 1px solid #e2e2e2;
+	padding: 10px 30px;
+}
+.percenter-right{
+	display: none;
+	border:2px solid #e2e2e2;
+	width:970px;
+	padding:20px;
+}
+.percenter-right.on{
+    display: block;
+}
+.myname{
+	display: none;
+	border:2px solid #e2e2e2;
+	width:970px;
+	padding:20px;
+}
+.my-renzheng{
+	border:2px solid #e2e2e2;
+	width:970px;
+	padding:20px;
+	display: none;
+}
+.my-renzheng.on{
+	display: block;
+}
+.myname.on{
+	display: block;
+}
+.my-yhj{
+	border:2px solid #e2e2e2;
+	width:970px;
+	height:512px;
+	padding:20px;
+	display: none;
+}
+.my-yhj.on{
+	display: block;
+}
+.percenter-right-title{
+	border:1px solid #e2e2e2;
+    height: 160px;
+	background:#fff9f5;
+	padding:20px;
+}
+.percenter-righttitle-img{
+	width:120px;
+	height:120px;
+	line-height: 120px;
+	border-radius:50%;
+}	   					
+.percenter-righttitle-con{
+	padding-left:160px;
+
+}
+.pull{
+	padding:5px;
+	background: #FF2D52;
+	color:white;
+	width:47px;
+	height:24px;
+	line-height: 17px;
+	display: inline-block;
+	padding-right;7px;
+	text-align: center;
+}
+.percenter-right-senterlefft{
+	border:1px solid #e2e2e2;
+	width:439px;
+	height:200px;
+}
+.percenter-right-senterright{
+	border:1px solid #e2e2e2;
+	width:50%;
+	padding-left: 20px;;
+	height:200px;
+}
+.right-senterlefft-title{
+	background:#fff9f5;
+	height:40px;
+	line-height: 40px;
+	padding:0 10px;
+}
+.right-senterlefft-lists{
+	padding:20px 30px;
+}
+.right-senterlefft-lists li img{
+	width:105px;
+	height:105px;
+}
+.percenter-right-senterlefft{
+ position: relative;	
+}
+
+
+.percenter-over{
+	position: absolute;
+	top:50%;
+	padding-top:-13px;
+	background:rgba(0,0,0,0.3);
+	border:1px solid #E2E2E2;
+	width: 25px;
+	text-align: center;
+	line-height: 47px;
+	height:55px;
+	/*display:inline-block*/
+	border-radius: 2px;
+
+}
+.percenter-overlist1{
+	left:0;
+}
+.percenter-overlist2{
+	right:0;
+}
+
+.myname-title{
+		border-bottom:1px solid #E2E2E2;
+}
+.myname-tits{
+	border-bottom:2px solid #FF2D52;
+	display: inline-block;
+	height:55px;
+	line-height: 55px;
+	
+}
+.myname-content{
+	border:1px solid #E2E2E2;
+	padding:20px; 
+	width:930px;
+	background: #fff9f5;
+}
+.duihuan{
+	padding:5px 10px;
+	background: #FF2D52;
+	color:white;
+}
+.myname-data-titles{
+	display: inline-block;
+	border-bottom: 1px dashed #E2E2E2;
+	}
+.myname-data-titles .myname-data-title{
+	float:left;
+	width: 308px;
+	text-align: center;
+	height:45px;
+	line-height: 45px;
+	background:#fff9f5;
+
+	
+}
+.myname-data
+{
+	border:1px solid #E2E2E2;
+}
+.myname-data-lists{
+	float:left;
+	width: 308px;
+	text-align: center;
+	height:45px;
+	line-height: 45px;
+	border-bottom:1px dashed #E2E2E2;
+}
+
+.spages-changs.on{
+	background: #FF2D52;
+}
+
+.my-yhj-title
+{
+	background:#fff9f5;
+	display:inline-block;
+	width:930px;
+} 
+.my-yhj-title li{
+	float:left;
+	width: 85px;
+	text-align: center;
+	height:45px;
+	line-height: 45px;
+
+	
+}
+.my-yhj-title li:hover{
+	background:#ffffff;
+}
+.dispaper-lists{
+	width: 280px;
+	height: 180px;
+}
+.renzheng-cont{
+	border:1px solid #E2E2E2;
+	background:#fff9f5;
+	padding:25px;
+}
+.idimg{
+	width:200px;
+	line-height: 130px;
+	text-align: center;
+	height: 130px;
+	display: inline-block;
+	border:1px solid #E2E2E2;
+	
+}
+
+.renzheng-success{
+	display:none;
+}
+.renzheng-success.on{
+		display:block;
+}
+.renzheng-list{
+		display:none;
+}
+.renzheng-list.on{
+		display:block;
+}

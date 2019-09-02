@@ -1,0 +1,287 @@
+!SESSION 2019-08-16 08:51:40.141 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -login -application com.aptana.commandline.launcher.LauncherApplication C:\Users\Direct\Desktop\龙菊\动画.html
+Command-line arguments:  -os win32 -ws win32 -arch x86 -login -data   -application com.aptana.commandline.launcher.LauncherApplication C:\Users\Direct\Desktop\龙菊\动画.html
+
+!ENTRY org.eclipse.ui 2 0 2019-08-16 08:51:40.806
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-08-16 08:51:40.806
+!MESSAGE Could not parse key sequence: plug-in='com.pandora.ui', id='org.eclipse.ui.edit.text.contentAssist.proposals', keySequence='Ctrl+Sapce'
+
+!ENTRY com.aptana.rcp 4 0 2019-08-16 08:51:40.978
+!MESSAGE ********HBuilder正常启动：preStartup********
+
+!ENTRY com.aptana.scripting 4 0 2019-08-16 08:51:42.735
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'Build–in constant' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.scripting 4 0 2019-08-16 08:51:42.736
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'library class/type' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.rcp 4 0 2019-08-16 08:51:44.310
+!MESSAGE ---------------------start check----------------------
+
+!ENTRY com.aptana.rcp 4 0 2019-08-16 08:51:44.310
+!MESSAGE check mode
+
+!ENTRY com.aptana.rcp 4 0 2019-08-16 08:51:44.462
+!MESSAGE workspace : file:\C:\Users\Direct\Desktop\龙菊
+
+!ENTRY com.aptana.rcp 4 0 2019-08-16 08:51:44.809
+!MESSAGE ********HBuilder正常启动：postStartup********
+
+!ENTRY com.pandora.rcp.upgrade 4 0 2019-08-16 08:51:44.888
+!MESSAGE (Build null) [ERROR]  HBuilder当前版本: 9.0.2.201803061935
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:45.814
+!MESSAGE (Build null) [ERROR]  ADB PID:::5592
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:46.023
+!MESSAGE (Build null) [ERROR]  ===Caption  ExecutablePath
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:46.028
+!MESSAGE (Build null) [ERROR]  ===adb.exe  D:\HBuilder.9.0.2.windows\HBuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:46.029
+!MESSAGE (Build null) [ERROR]  exe===adb.exe   path===d:\hbuilder.9.0.2.windows\hbuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:46.064
+!MESSAGE (Build null) [ERROR]  ADB Path===d:\hbuilder.9.0.2.windows\hbuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.aptana.editor.css 4 0 2019-08-16 08:51:46.111
+!MESSAGE (Build null) [ERROR]  开始清理css错误marker...
+
+!ENTRY com.aptana.editor.css 4 0 2019-08-16 08:51:46.115
+!MESSAGE (Build null) [ERROR]  清理css错误marker结束
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2019-08-16 08:51:46.179
+!MESSAGE D:\HBuilder.9.0.2.windows\HBuilder\p2\org.eclipse.equinox.p2.repository\cache\content-561804826.jar 是合法的jar
+
+!ENTRY com.pandora.index.store 4 0 2019-08-16 08:51:46.398
+!MESSAGE (Build null) [ERROR]  Port already in use: 56789; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+!STACK 0
+java.rmi.server.ExportException: Port already in use: 56789; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(Unknown Source)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(Unknown Source)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(Unknown Source)
+	at sun.rmi.transport.LiveRef.exportObject(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.exportObject(Unknown Source)
+	at sun.rmi.registry.RegistryImpl.setup(Unknown Source)
+	at sun.rmi.registry.RegistryImpl.<init>(Unknown Source)
+	at java.rmi.registry.LocateRegistry.createRegistry(Unknown Source)
+	at com.pandora.index.store.IndexStoreStartup.run(IndexStoreStartup.java:28)
+	at com.pandora.index.store.IndexStoreStartup.earlyStartup(IndexStoreStartup.java:18)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$69.run(Workbench.java:2726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.TwoStacksPlainSocketImpl.socketBind(Native Method)
+	at java.net.TwoStacksPlainSocketImpl.socketBind(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.bind(Unknown Source)
+	at java.net.TwoStacksPlainSocketImpl.bind(Unknown Source)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(Unknown Source)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(Unknown Source)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(Unknown Source)
+	... 15 more
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.518
+!MESSAGE (Build null) [ERROR]  path1======C:\Program Files\Common Files\Apple\Apple Application Support\CoreFoundation.dll
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.519
+!MESSAGE (Build null) [ERROR]  path2======C:\\Program Files\\Common Files\\Apple\\Apple Application Support\\CoreFoundation.dll
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.648
+!MESSAGE (Build null) [ERROR]  loadSystemPath_05 error
+!STACK 0
+java.lang.UnsatisfiedLinkError: C:\Program Files\Common Files\Apple\Apple Application Support\CoreFoundation.dll: Can't find dependent libraries
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary1(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.loadSystemPath(LibraryFinder.java:203)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.foundCoreLibrary(LibraryFinder.java:217)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getCFLibrary(LibraryFinder.java:144)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getMDLibrary(LibraryFinder.java:128)
+	at com.pandora.launcher.core.iphone.jna.md.LibraryInstance.getMDLibrary(LibraryInstance.java:15)
+	at com.pandora.launcher.core.iphone.jna.idevice.win.WinDeviceLibrary.<clinit>(WinDeviceLibrary.java:72)
+	at com.pandora.launcher.core.iphone.jna.idevice.DeviceLibraryRegistry.getDeviceLibrary(DeviceLibraryRegistry.java:15)
+	at com.pandora.launcher.core.iphone.IPhoneLauncher.<init>(IPhoneLauncher.java:109)
+	at com.pandora.launcher.core.listener.DeviceStartupListener.earlyStartup(DeviceStartupListener.java:29)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:87)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$69.run(Workbench.java:2726)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:46.660
+!MESSAGE (Build null) [ERROR]  ADB PID:::5592
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.705
+!MESSAGE (Build null) [ERROR]  添加Android设备监听......
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.753
+!MESSAGE (Build null) [ERROR]  path1======C:\Program Files\Common Files\Apple\Apple Application Support\CoreFoundation.dll
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.759
+!MESSAGE (Build null) [ERROR]  path2======C:\\Program Files\\Common Files\\Apple\\Apple Application Support\\CoreFoundation.dll
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.763
+!MESSAGE (Build null) [ERROR]  loadSystemPath_05 error
+!STACK 0
+java.lang.UnsatisfiedLinkError: C:\Program Files\Common Files\Apple\Apple Application Support\CoreFoundation.dll: Can't find dependent libraries
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary1(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.loadSystemPath(LibraryFinder.java:203)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.foundCoreLibrary(LibraryFinder.java:217)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getCFLibrary(LibraryFinder.java:144)
+	at com.pandora.launcher.core.iphone.jna.LibraryFinder.getMDLibrary(LibraryFinder.java:128)
+	at com.pandora.launcher.core.iphone.jna.md.LibraryInstance.getMDLibrary(LibraryInstance.java:15)
+	at com.pandora.launcher.core.iphone.jna.idevice.win.WinDeviceLibrary.addNotificationHandler(WinDeviceLibrary.java:77)
+	at com.pandora.launcher.core.iphone.IPhoneLauncher$5.run(IPhoneLauncher.java:799)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.pandora.launcher.core 4 0 2019-08-16 08:51:46.800
+!MESSAGE (Build null) [ERROR]  library is null!!!!!
+
+!ENTRY com.pandora.stats.core 1 0 2019-08-16 08:51:46.831
+!MESSAGE 
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:47.050
+!MESSAGE (Build null) [ERROR]  ADB PID:::5592
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:47.267
+!MESSAGE (Build null) [ERROR]  ===Caption  ExecutablePath
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:47.267
+!MESSAGE (Build null) [ERROR]  ===adb.exe
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:47.378
+!MESSAGE (Build null) [ERROR]  ADB Path===D:\HBuilder.9.0.2.windows\HBuilder\tools\adbs\adb.exe
+
+!ENTRY com.aptana.parsing 4 0 2019-08-16 08:51:47.405
+!MESSAGE (Build null) [ERROR]  无效的属性类型“.webkit.SearchBoxImpl@4135441”属性“searchBoxJavaBridge_”
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2019-08-16 08:51:47.406
+!MESSAGE D:\HBuilder.9.0.2.windows\HBuilder\p2\org.eclipse.equinox.p2.repository\cache\content1190459293.jar 是合法的jar
+
+!ENTRY com.pandora.core.utils 4 0 2019-08-16 08:51:47.847
+!MESSAGE (Build null) [ERROR]  Wmic Error:::No Instance(s) Available.
+
+!ENTRY com.pandora.core.utils 4 0 2019-08-16 08:51:47.848
+!MESSAGE (Build null) [ERROR]  Wmic Error:::
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:47.872
+!MESSAGE (Build null) [ERROR]  ADB Path===null
+
+!ENTRY com.aptana.scripting 4 0 2019-08-16 08:51:48.014
+!MESSAGE (Build null) [ERROR]  loadBundles异常
+!STACK 0
+org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
+	at org.jruby.RubyHash.replace(org/jruby/RubyHash.java:1623)
+
+!ENTRY com.pandora.rcp.upgrade 4 0 2019-08-16 08:51:48.326
+!MESSAGE (Build null) [ERROR]  最新版本: 9.1.29.201811231920
+
+!ENTRY com.pandora.rcp.upgrade 4 0 2019-08-16 08:51:48.351
+!MESSAGE (Build null) [ERROR]  上次提醒更新版本: 9.1.29.201811231920
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:49.035
+!MESSAGE (Build null) [ERROR]  ADB Path===D:\HBuilder.9.0.2.windows\HBuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.aptana.core 4 0 2019-08-16 08:51:50.976
+!MESSAGE (Build null) [ERROR]  *********索引不存在触发 FULL BUILD **********C:/Users/Direct/Desktop/龙菊/龙菊
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:51.115
+!MESSAGE (Build null) [ERROR]  ADB PID:::7400
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:51.207
+!MESSAGE (Build null) [ERROR]  ===Caption  ExecutablePath
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:51.208
+!MESSAGE (Build null) [ERROR]  ===adb.exe  D:\HBuilder.9.0.2.windows\HBuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.pandora.tools.android 4 0 2019-08-16 08:51:51.208
+!MESSAGE (Build null) [ERROR]  exe===adb.exe   path===d:\hbuilder.9.0.2.windows\hbuilder\tools\adbs\1.0.31\adb.exe
+
+!ENTRY com.aptana.commandline.launcher 4 0 2019-08-16 08:52:14.170
+!MESSAGE Stream closed
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.aptana.commandline.launcher.server.LauncherServer$CommandLineArgsServer.run(LauncherServer.java:135)
+
+!ENTRY com.aptana.commandline.launcher 4 0 2019-08-16 08:52:14.375
+!MESSAGE Stream closed
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.aptana.commandline.launcher.server.LauncherServer$CommandLineArgsServer.run(LauncherServer.java:135)
+
+!ENTRY com.aptana.core 4 0 2019-08-16 08:52:39.058
+!MESSAGE (Build null) [ERROR]  null
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.editor.html.contentassist.HTMLContentAssistProcessor.isEnableVuejs(HTMLContentAssistProcessor.java:538)
+	at com.aptana.editor.html.contentassist.HTMLContentAssistProcessor.addAttributeAndEventProposals(HTMLContentAssistProcessor.java:431)
+	at com.aptana.editor.html.contentassist.HTMLContentAssistProcessor.addOpenTagProposals(HTMLContentAssistProcessor.java:1917)
+	at com.aptana.editor.html.contentassist.HTMLContentAssistProcessor.doComputeCompletionProposals(HTMLContentAssistProcessor.java:2277)
+	at com.aptana.editor.common.CommonContentAssistProcessor.computeCompletionProposals(CommonContentAssistProcessor.java:554)
+	at com.aptana.editor.common.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2367)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:442)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.access$10(CompletionProposalPopup.java:434)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup$1.run(CompletionProposalPopup.java:335)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:388)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:291)
+	at com.aptana.editor.common.contentassist.ContentAssistant$AssistRunnable.showAssist(ContentAssistant.java:318)
+	at com.aptana.editor.common.contentassist.ContentAssistant$AssistRunnable.run(ContentAssistant.java:285)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.pandora.stats.core 4 0 2019-08-16 08:52:50.077
+!MESSAGE (Build null) [ERROR]  list job time: 3175
+
+!ENTRY com.aptana.editor.html 4 0 2019-08-16 08:54:01.745
+!MESSAGE (Build null) [ERROR]  null
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.editor.js.contentassist.JSContentAssistProcessor.getLocationType(JSContentAssistProcessor.java:2097)
+	at com.aptana.editor.js.contentassist.JSContentAssistProcessor.doComputeCompletionProposals(JSContentAssistProcessor.java:1094)
+	at com.aptana.editor.html.ext.HTMLSingleScriptContentAssistProcessor.doComputeCompletionProposals(HTMLSingleScriptContentAssistProcessor.java:40)
+	at com.aptana.editor.common.CommonContentAssistProcessor.computeCompletionProposals(CommonContentAssistProcessor.java:554)
+	at com.aptana.editor.common.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2367)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:442)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.access$10(CompletionProposalPopup.java:434)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup$1.run(CompletionProposalPopup.java:335)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:388)
+	at com.aptana.editor.common.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:291)
+	at com.aptana.editor.common.contentassist.ContentAssistant$AssistRunnable.showAssist(ContentAssistant.java:318)
+	at com.aptana.editor.common.contentassist.ContentAssistant$AssistRunnable.run(ContentAssistant.java:285)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.aptana.commandline.launcher 4 0 2019-08-16 09:23:58.086
+!MESSAGE Stream closed
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.aptana.commandline.launcher.server.LauncherServer$CommandLineArgsServer.run(LauncherServer.java:135)

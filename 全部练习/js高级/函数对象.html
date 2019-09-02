@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//工厂函数
+	function person(name,callName){
+		var obj=new Object()
+		obj.name=name
+		obj.callName=callName
+		obj.callName()
+	}
+//	person('zhangsan1',function(){
+//		console.log(this.name)
+//	})
+//	person('zhangsan2',function(){
+//		console.log(this.name)
+//	})
+//	person('zhangsan3',function(){
+//		console.log(this.name)
+//	})
+//	person('zhangsan4',function(){
+//		console.log(this.name)
+//	})
+	//函数转对象
+	function func(name,callName){
+		console.log(this)
+		this.name=name
+		this.callName=callName
+	}
+var obj1=new func('zhangsan1',function(){
+		console.log(this.name)
+	})
+var obj2=new func('zhangsan2',function(){
+		console.log(this.name)
+	})
+var obj3=new func('zhangsan3',function(){
+		console.log(this.name)
+	})
+</script>

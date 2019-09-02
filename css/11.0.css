@@ -1,0 +1,29 @@
+.maincont-lists{
+	padding: 0 20px;
+}
+.maincont-lists-title{
+	height:60px;
+	line-height: 60px;
+	border-bottom:1px dashed #E2E2E2;
+	
+}
+.maincont-list{
+	border:1px solid #E2E2E2;
+	
+}
+.maincont-lists-content{
+	padding:20px 0;
+}
+.maincont-lists-content img{
+	width: 250px;
+	height:150px;
+	float:left;
+}
+.maincont-lists-content p{
+	width:888px;
+}
+
+.maincont-lists{
+	border-bottom:1px solid #E2E2E2;
+	
+}

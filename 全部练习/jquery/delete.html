@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div>
+			<input type="text" />
+			<button class="submit">提交</button>
+		</div>
+		<ul>
+			<li>而更好玩ilu<button class="deletess">删除</button></li>
+		</ul>
+	</body>
+	     <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	     <script>
+	     	
+	     	$('ul').on('click','.deletess',function(){
+	     		$(this).closest('li').remove()
+	     	})	     	
+//	     	 $('.deletess').click(function(){
+//	     		$(this).closest('li').remove()
+//	     	})	    
+	     	 $('.submit').click(function(){ 
+	     	 	var value=$('[type=text]').val();
+	     	 	$('ul').append('<li>'+value+'<button class="deletess">删除</button></li>')
+	     	 	$('[type=text]').val('')
+	     	 })
+	     	
+	     </script>
+</html>

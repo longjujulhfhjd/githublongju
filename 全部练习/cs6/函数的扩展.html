@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+</html>
+<script>
+	function aa(){
+		console.log(111)
+	}
+	aa()
+	let bb=function() {
+		console.log(222)
+	}
+	bb()
+	let cc=function(x=1) {
+		console.log(x)
+	}
+	cc()
+	
+//	let x=1;
+//	let dd=function(x=x) {//会报错
+//		console.log(x)
+//	}
+//dd()
+
+	let x=1;
+	let dd=function(x,y=x) {//会报错
+		console.log(x,y)
+	}
+	dd(2)
+	let ff=function(...a) {//会报错
+		console.log(a)
+	}
+	ff(2,3,4)
+	let gg=(x) =>x
+	console.log(gg('sdgkldv'))
+	let hh=(x) =>x+1
+	console.log(hh(10))
+		let ii=(x) =>{
+			x=x+1;
+			return x;
+		}
+	console.log(ii(12))
+	var adiv=document.querySelectorAll('div')
+	for(let i=0;i<adiv.length;i++){
+		adiv[i].onclick=function(){
+			setTimeout(
+			()=>{
+				console.log(this)
+		},1000)
+		}
+		
+	}
+</script>
