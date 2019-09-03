@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../js/ajax.js"></script>
+<script>
+//Promise是一个构造函数
+//resolve,reject两个回调方法 前者是成功的数据，后者是失败的方法
+ let p = new Promise(function(resolve,reject){
+	let a=5;
+	if(a<=1){
+		resolve({
+			success:true,
+			data:{
+				a:a,
+				b:1
+			}
+		})
+	}else{
+		reject({
+			success:false			
+		})
+	}
+
+})
+ p.then(function(result){
+ 	 console.log(result)
+ }).catch(function(e){
+ 	 console.log(e)
+ })
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//当键为对象时，要成为map的同一个键，不仅值一样，内存地址也要一样，如果不一样则会被看成两个键
+//	new Map()类对象数据类型 键和值
+    let m=new Map();
+    //m.set('a',1)给m设置值
+    m.set('a',1)
+    console.log(m)
+//  get('a')
+    console.log( m.get('a'))//获取值
+//  与object的区别 object中，对象的键只能是字符串,如果为对象会自动装换为字符串
+//  与object的区别map中，对象的键可能为对象，也可以为函数
+     let obj=new Object({
+     	a:1
+     })
+     let key1={
+     	p:'haha'
+     }
+     m.set(key1,'这是一个map中的元素')
+   
+    obj[key1]='这是一个obj中的元素'
+        console.log(obj)
+        console.log('object Object')
+        console.log(obj['[object Object]'] )
+        console.log(obj[key1] )
+        let aa=function(){
+        	console.log('这是一个function函数')
+        }
+        m.set(aa,'这是一个函数')
+         console.log(m)
+        for(let key of m.keys()){
+        	if(typeof key=='function'){
+        		key()
+        	}else if(typeof key=='object'){
+        		console.log(key.p)
+        	}
+        }
+</script>

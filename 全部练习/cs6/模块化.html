@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/module1.js" type="module"></script>
+<script type="module">
+	//import {a,aa,c} from './../js/module1.js'
+	import * as module1 from './../js/module1.js'
+	
+	//通过默认导出时不需要大括号，只能导出一次
+	//import cc from './../js/module1.js'
+	console.log(module1)
+	
+</script>

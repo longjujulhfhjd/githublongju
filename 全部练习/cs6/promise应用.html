@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../js/ajax.js"></script>
+	<script>
+	//then来掉用，返回的必然是一个Promise对象
+	resolveAjax({
+		url:'http://192.168.97.247:3001/lists',
+		type:'get',
+		async:true
+	}).then(function(result){
+		console.log(result)
+	})
+	
+	</script>
+
+</html>

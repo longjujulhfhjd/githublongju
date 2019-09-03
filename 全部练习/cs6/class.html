@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//类中方法的使用，相当于构造方法中原型的使用，多个方法之间不用逗号隔开
+	class  Point{
+		//constructor用于类传参
+		constructor(obj){
+	        for(let pro in obj ){
+	        	this[pro]=obj[pro]
+	        }
+		}
+		fun1(){
+		   console.log(3333)
+		}
+		fun2(){
+		   console.log(444)
+		}
+	} 
+	let cla=new Point({
+		x:2,
+		y:3,
+		z:4
+	})
+	console.log(cla)
+	cla.fun1()
+	//继承属性
+	class   PointChild extends Point{
+		constructor(obj){
+	        super(obj)//需要继承上级属性，通过调用super传参继承属性
+		}
+		fun3(){
+			console.log(5555)
+		}
+	}
+	var child=new PointChild({
+		v:1,
+		z:5
+	})
+			console.log(child)
+	child.fun2()
+	//类中方法的使用，相当于构造方法中原型的使用，多个方法之间不用逗号隔开
+	class  Point1{
+		//constructor用于类传参
+		constructor(x,y,z){
+//			console.log(x,y,z)
+          this.x=x;
+          this.y=y;
+          this.z=z;
+		}
+		fun1(){
+		   console.log(3333)
+		}
+		fun2(){
+		   console.log(3333)
+		}
+	} 
+	let cla1=new Point1(1,2,3)
+	console.log(cla)
+	cla1.fun1()
+	
+	
+	
+	//构造函数和原型
+	function Factory(obj){
+		for (let prop in obj){
+			this[prop]=obj[prop]
+		}
+	}
+	let fac=new Factory({
+		x:1,
+		y:2
+	})
+	console.log(fac)
+	Factory.prototype.fun1=function(){
+		console.log(this.x)
+	}
+	fac.fun1();
+</script>
