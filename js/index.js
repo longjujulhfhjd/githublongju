@@ -165,7 +165,7 @@
 				             <span class="time">${arr[6]}</span>
 				             <span class="time">${arr[7]}</span>`
 			
-<<<<<<< HEAD
+
 		var countdownTime=countDown('2019-9-1 23:37:00')
 		if( parseInt(countdownTime)<=0)
 		{
@@ -184,9 +184,8 @@
 			             <span class="time">${arr[5]}</span>`
 		
 		document.querySelector('.count-down').innerHTML=html;
-=======
 			document.querySelector('.count-down').innerHTML=html;
->>>>>>> 922b32f2ea02f8d5a12f85ccd5d6f1fd99869bef
+
 		}
 		
 		

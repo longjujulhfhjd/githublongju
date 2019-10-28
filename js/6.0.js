@@ -6,7 +6,7 @@ var imglength=img.length
 var imgwidth=img.outerWidth(true);
 var scollwidth=imglength*imgwidth;
 scrool.css({
-	width:scollwidth
+	width:scollwidth/2
 })
 next.click(function(){
 	scrool.animate({

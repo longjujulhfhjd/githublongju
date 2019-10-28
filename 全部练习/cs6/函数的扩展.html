@@ -31,19 +31,20 @@
 //dd()
 
 	let x=1;
-	let dd=function(x,y=x) {//会报错
+	let dd=function(x,y=x) {function(x,y=x)//内部会形成运行环境,与前面的x无关
 		console.log(x,y)
 	}
 	dd(2)
-	let ff=function(...a) {//会报错
+	let ff=function(...a) {//rest运算
 		console.log(a)
 	}
-	ff(2,3,4)
+	ff(2,3,4)//必须传值
+	let zz=x =>x当参数为1时,小括号可以不写
 	let gg=(x) =>x
 	console.log(gg('sdgkldv'))
 	let hh=(x) =>x+1
 	console.log(hh(10))
-		let ii=(x) =>{
+		let ii=(x) =>{//当函数的处理体有多句话时，用大括号
 			x=x+1;
 			return x;
 		}

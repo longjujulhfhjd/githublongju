@@ -17,7 +17,7 @@
 		x1:'lqdiugv'
 	}
 	// 属性名和值一样时，可以只写属性名
-	//属性方法可以省略不写
+	//属性方法可以省略不写function可以不写
 	//this当前这个对象
 	let obj1={
 		x,
@@ -27,6 +27,7 @@
 	}
 	obj.aa()
 	obj1.aa()
+	//可以用表达式来获取值
 //	var c='x'
 //	var x1;
 //	console.log(obj[c+'1'])
@@ -50,6 +51,6 @@ var ss=Object.getOwnPropertyDescriptor(obj2,'foo')
 console.log(ss.get.name)
 //对象的扩展
 let {f,g,...h}={f:1,g:2,h:3,x:4}
-console.log(h)
-let {f1,g1,...h}={f:1,g:2,h:3,x:4}
+console.log(h)//{h: 3, x: 4}
+//super相当于父级的this
 </script>

@@ -8,18 +8,24 @@
 	</body>
 </html>
 <script>
+	//定义：原型链就是一个构造的原型 是另一个构造函数的实例，就形成了原型链
+	//Prototype 显示原型 在构造函数上
+    //__proto__ 隐式原型 在实例上
+
 	function Dog(){
 		
 	}
+	Dog.prototype.aaa=111;
 	var dog1=new Dog()
-	var dog2=new Dog()
-	function Cat(){
-		
-	}
-	Cat.prototype=new Dog()
-	console.log(Cat.prototype.__proto__.constructor)
-	//	console.log(Dog.prototype.constructor==Dog)
-	console.log(Cat.prototype.__proto__.constructor==Dog)
-	console.log(Cat.prototype.__proto__.constructor==Dog.prototype.constructor)
-	console.log(Cat.prototype.__proto__==Dog.prototype)
+	console.log(Dog.prototype.constructor==Dog)
+    function Cat(){
+    	
+    } 
+    Cat.prototype=new Dog()//new Dog() Dog函数的实例
+    
+    console.log(Cat.prototype.__proto__.constructor==Dog)
+    console.log(Cat.prototype.__proto__==Dog.prototype)//Cat.原型.隐式原型==Dog.原型
+     var cat1 =new Cat()
+     console.log(cat1)
+     console.log(cat1.aaa)
 </script>

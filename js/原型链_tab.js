@@ -1,17 +1,23 @@
+//闭包封装,
+//闭合空间，在外面不能调用，需要将其抛出
 (function(w){
-	 function tabexp(options){
+	 function tabexp(options){//构造函数
+	 	//	console.log(this)//this为TabExample（）函数
 	 	this.box=document.querySelector(options.box)
 	 	this.chag()
 	 }
 	 tabexp.prototype.chag=function(){
 	 	var _this=this;
+	 	
         this.tabtitle=this.box.querySelectorAll('.tab-title')
         this.tablist=this.box.querySelectorAll('.lists-tab')
         for(var i=0;i< this.tabtitle.length;i++)
         {
+        	//给当前按钮存储一个下标v
       	    this.tabtitle[i].index=i
       	    this.tabtitle[i].onclick=function(){
-		   	 _this.index=this.index;
+      	    	//.log(this)//当前的this为title按钮
+		   	 _this.index=this.index;//给公共（ _this.index）的tab存一个下标，下标为点击的按钮的下标this.index
 		   	 _this.chageng();
       	    }
         }

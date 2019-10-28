@@ -11,18 +11,16 @@ body{
 }
 
 li{
-
 	list-style: none;
 }
 a{
 	text-decoration: none;
 	color: #000;
 }
-
 :focus {
 	outline:none;  
 }
- .content{
+.content{
 	margin: 0 auto;
 	width: 1200px;
 }
