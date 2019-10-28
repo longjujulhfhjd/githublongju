@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模仿图书借书</title>
+	</head>
+	<body>
+		<input type="text" name="name" />
+		<input type="text" name="age" />
+		<input type="text" name="year" />
+		<button>提交</button>
+	</body>
+</html>
+<script>
+	
+	document.querySelector('button').onclick = function(){
+		var obj={
+			name:'',
+			_age:'',
+			_year:''
+		}
+		var  name=document.querySelector('[name=name]').value
+		var  age=document.querySelector('[name=age]').value
+		var  year=document.querySelector('[name=year]').value
+		Object.defineProperty(obj,'age',{
+			get:function(){
+				this._age=age
+			},
+			set:function(age){
+				if(age<0){
+					age=1
+				}else if(age>120){
+					age=120
+				}
+				this._age=age
+			}
+	
+		})	
+		Object.defineProperty(obj,'year',{
+			get:function(){
+				this._year=year
+			},
+			set:function(year){
+				year=Number(year)
+				if(year<1900){
+					year=1900;
+				}else if(year>2019){
+					year=2019
+				}
+				this._year=year;
+			}
+	
+		})	
+		obj.name=name
+		obj.age=age
+		obj.year=year
+		console.log(obj)
+	} 
+	
+</script>

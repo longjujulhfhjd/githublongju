@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<!--//目的：使用函数封装 为了创建大量数据,定义一系列的对象，这些对象有相同的属性和方法-->
+<script>
+//	1.创建需要很多代码,需要简化	
+	var obj={
+		name:'longju',
+		//获取name
+		callName:function(){
+			return this.name;
+		},
+		//存储name
+		setName:function(name){
+			this.name=name
+		}
+	}
+	obj.name='lisi'
+	
+//2.简化代码
+	function person(name,getName){
+		let obj=new Object()
+		obj.name=name
+		obj.getName=getName
+		console.log(obj.name)
+	}
+
+	person('longju',function(){console.log(this.name)})
+	person('longjuu',function(){console.log(this.name)})
+	person('longjuuu',function(){console.log(this.name)})
+	
+//每一次调用prson,都会创建一个对象，这样就会在堆里开发一个空间，很占内存，所以需要只创建一个对象
+//	函数转对象(返回了值)
+	function Fac(name,getName){
+		this.name=name;
+		this.getName=getName;		
+	}
+	var obj1=new Fac('longju',function(){
+		console.log(this.name)
+	
+	})
+	var obj2=new Fac('longjuu',function(){
+		console.log(this.name)
+	
+	})
+	var obj3=new Fac('longjuuu',function(){
+		console.log(this.name)
+	
+	})
+	console.log(obj1,obj2,obj3)
+	
+	
+	
+	
+	
+
+</script>

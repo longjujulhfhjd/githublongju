@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+	function Dog(obj){
+//		this.name=name name是 person1=new Person('longju1','ren')的longju1
+//		this.name=obj.name name是
+//		let dog1=new Dog({
+//		name:'二哈',
+//		type:'erha',
+//		color:'grey'
+//		})的二哈
+		this.name=obj.name
+		for(var prop in obj){//每个属性循环出来
+			this[prop]=obj[prop]
+		}
+		
+	}
+	Dog.prototype.sayname=function(){// Person的原型
+//		console.log(this.name)
+	}
+	let dog1=new Dog({
+		name:'二哈',
+		type:'erha',
+		color:'grey'
+	})
+	let dog2=new Dog({
+		name:'田园犬',
+		type:'tianyuanquan',
+		color:'white'
+	})
+	console.log(dog1)
+	console.log(dog2)
+//	console.log(dog1.__proto__ == obj.__proto__)
+//	console.log(Object.prototype==obj.__proto__)//Dog继承Object,cat可以继承D欧冠
+
+</script>

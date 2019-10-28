@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//构造函数  ：被new出来的函数
+	//要点：定义一个函数，函数名要大写
+	//函数的内部使用this,指向函数生成的实力对象
+	//使用new来年生成对象
+	
+	function Person(name,type){
+		this.name=name;
+		this.type=type;		
+	}
+	var dog1=new  Person('longju','ren')
+	var dog2=new Person('longjuu','ren')
+	var dog3=new Person('longjuuu','ren')	
+	console.log(dog1,dog2,dog3)
+//	console.log(Person)
+</script>
+

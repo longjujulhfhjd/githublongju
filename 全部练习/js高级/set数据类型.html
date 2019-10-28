@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//set类数据数组,数据不能重复
+	//	set和数组间的转换
+	let arr=[1,2,3,'fghf','g','g','fghf',1,3,4,5,2]
+    //数组转set new Set(数组)
+	let arrSet=new Set(arr)
+	arrSet.add(9).add(8)//添加某个值
+	console.log(arrSet)
+	//set转数组 [...Set]
+	arr=[...arrSet]
+	console.log(arr)
+	//keys()键和值一样
+	for(let item of arrSet.keys()){
+		console.log('keys'+item)
+	}
+	for(let item of arrSet.values()){
+		console.log('values'+item)
+	}
+	for(let item of arrSet.entries()){
+		console.log('entries'+item)
+	}
+	console.log(arrSet.size)//没有length方法,用size计算长度
+	arrSet.delete('g')//删除g
+	console.log(arrSet)
+	console.log(arrSet.has('g'))
+</script>

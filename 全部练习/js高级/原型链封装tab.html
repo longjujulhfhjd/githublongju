@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.lists-tab{
+				width: 200px;
+				height:300px;
+				border:1px solid #ccc;
+				display: none;
+			}
+			.lists-tab.active{
+				display: block;
+			}	
+			.tab-title{
+				cursor: pointer;
+			}
+			.tab-title.active{
+				background: deepskyblue;
+				color:aquamarine;
+				border:1px solid  deepskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tab-box">
+			<button class="tab-title active">按钮1</button>
+			<button class="tab-title">按钮2</button>
+			<button class="tab-title">按钮3</button>
+		</div>
+		<div class="table-list">
+			<div class="lists-tab active">内容1</div>
+			<div class="lists-tab">内容2</div>
+			<div class="lists-tab">内容3</div>
+		</div>
+	</body>
+</html>
+<script src="js/原型链_tab.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	new tabexp({//构造函数创建实例化对象时，需要new
+		box:'.tab-box'
+	});
+</script>

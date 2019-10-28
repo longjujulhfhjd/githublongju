@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	//作用域与大括号无关，与function有关，全局变量在整个运行环境都可以使用
+	    var a=1;
+	    function aa(){
+	    	var b=2;
+	    	console.log(a)
+	    }
+	    aa()
+	    {
+	    	var cc=5;
+	    }
+	    console.log(cc)
+	    console.log(b)
+</script>

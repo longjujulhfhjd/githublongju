@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			button{
+				
+			}
+			.tablist{
+				display: none;
+				width:200px;
+				height:200px;
+				border:1px solid #CCCCCC;
+				
+			}
+			.tablist.on{
+				display: block;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+		<div class="tablist on">1</div>
+		<div>2</div>
+		<div>3</div>
+	</body>
+	<script>
+		var btn=document.querySelectorAll('button')
+		for(let j=0;j<btn.length;j++){
+			btn[j].onclick=function(){
+				var tablist=document.querySelectorAll('.tablist')
+				for(var i=0;i<btn.length;i++){
+					//给当前添加on,其余的移出on
+					tablist[i].classList.remove('on')
+				}
+					tablist[j].classList.add('on')
+			}
+	
+		}
+		
+	</script>
+</html>

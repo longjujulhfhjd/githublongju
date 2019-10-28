@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组解构</title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		let [a,b,c,d]=[1,2,3,4]
+//		console.log(a,b,c,d)
+//		let [a,b,c,d]=[1,2,3]//解构不成功为Undefine
+//		console.log(a,b,c,d)
+//		let [a,b,c,d=10]=[1,2,3]//可以给默认值赋值
+//		console.log(a,b,c,d)
+//		let [a,b,c,d=10]=[1,2,3,null]//当值为null时，解构的值为null
+//		console.log(a,b,c,d)
+//		let [a,b,c,d=10]=[1,2,3,undefined]//当值为undefined时，解构的值为默认值，没有为undefined
+//		console.log(a,b,c,d)
+//		let [a,b,c,d=10]=[1,2,3,undefined]//当值为undefined时，解构的值为默认值，没有为undefined
+//		console.log(a,b,c,d)
+//		let [a,[b,c],d=10]=[1,2,3,undefined]//结构两边的结构要一致
+//		console.log(a,b,c,d)
+		let [a,[b,c],d=10]=[1,[2],3,undefined]//结构两边的结构要一致
+		console.log(a,b,c,d)
+	</script>
+</html>

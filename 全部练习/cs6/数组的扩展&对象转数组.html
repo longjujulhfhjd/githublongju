@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	//Array.from(obj)将对象转数组
+	  var obj={
+	  	0:'数组1',
+	  	1:'数组2',
+	  	3:'数组4',
+	  	4:'数组5',
+	  	a:'jkagyw',
+	  	length:5
+	  }
+	   var  arr=Array.from(obj)//根据下标来转2：''没有
+	   console.log(arr)
+	   //Array.of()将逗号分割的字符串转数组
+	   let str='f,1,2,3,4'
+	   var arr1=Array.of(str)
+	   console.log(arr1)
+	   let aa=[1,2,3]
+	   console.log(Array.of(1,8,8,...aa,3,4,3))
+	   let bb=[1,2,3,4,5,6]
+	   let cop=bb.copyWithin(0,4,6)//copyWithin(位置，起始位置，结束位置)会将相应位置胡值替换
+	   console.log(cop)// [5, 6, 3, 4, 5, 6]
+//	   flat(n)解析n层将多维数组解析成一维数组
+	   let cc=[[1,[1,5]],[3,4],[5,6]]
+	   console.log(cc.flat(2))
+</script>

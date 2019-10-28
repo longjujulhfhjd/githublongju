@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			a:1,
+			b:2,
+			c:function(){
+				
+			}
+		}
+		Object.defineProperty(obj,'a',{
+			writable:false,
+			value:123,
+			enumerable:false,//是否遍历
+			configurable:false//是否被删除
+			
+		})
+//		console.log(Object.getOwnPropertyDescriptor(obj,'a'))
+		obj.a=333//如果不能编辑描述，就不能通过这种方法去改变其值
+	
+		for(var prop in obj){
+			console.log(prop)
+		}
+		delete obj.a
+		console.log(obj)
+	</script>
+</html>

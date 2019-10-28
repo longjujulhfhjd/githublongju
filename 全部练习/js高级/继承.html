@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+//	继承instanceof
+	function Dog(obj){
+
+		
+		for(var prop in obj){//每个属性循环出来
+			this[prop]=obj[prop]
+		}
+		
+	}
+	Dog.prototype.sayname=function(){// Person的原型
+		console.log(this.name)
+	}
+	Dog.prototype.qq=function(){// Person的原型
+		console.log('qq')
+	}
+	let dog1=new Dog({
+		name:'二哈',
+		type:'erha',
+		color:'grey'
+	})
+	let dog2=new Dog({
+		name:'田园犬',
+		type:'tianyuanquan',
+		color:'white'
+	})
+   //cat继承dog	继承可以使得cat子类别具有Dog父类别的各种属性和方法
+   
+    function Cat(obj){
+    	for(var prop in obj){//每个属性循环出来
+			this[prop]=obj[prop]
+		}
+    }
+    //Cat的原型是Dog
+    Cat.prototype=new Dog({
+    	name:'二哈',
+		type:'erha',
+		color:'grey'})
+    var cat1=new Cat({
+    	name:'cat'
+    })
+ 	//继承方法
+    cat1.sayname()
+    cat1.qq() 
+    //继承属性
+    console.log(cat1.color)
+</script>

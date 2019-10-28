@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+  //map()方法构造函数     new map()实例，类对象 有键和值
+	let m=new Map()	
+	m.set('a',1)//给Map设置值	
+//	console.log(m.get('a'))//get('a')获取Map中的值   
+    //和对象object的区别
+    let obj=new Object({
+    	a:1
+    })
+    let key1={
+    	p:'haha'
+    }
+    let key2=function(){
+    	console.log('这是一个通过key调用的方法')
+    }
+    m.set(key1,'这是一个map中的元素，键为对象')//Mapde 键可以为对象，也可以为函数
+    m.set(key2,'这是一个map中函数')//Mapde 键可以为对象，也可以为函数
+    console.log(m)
+
+	obj[key1]='这是一个object中的元素，键为对象'//结果对象的键只能是字符串[object object]会自动转换为字符串
+    obj[key2]='这是一个object中函数'
+    console.log(obj)
+    
+    for(let prop of m.entries()){
+    	console.log(prop)
+    }
+    //m.entries()将对象解释成键和值组成的数组
+    for(let [keys,value] of m.entries()){
+    	console.log(keys,value)
+    }
+    
+    for(let keys of m.keys()){
+    // console.log(typeof keys)//获取m的键的类型
+		if(typeof keys=='function'){
+			keys()
+		}else if(typeof keys=='object'){
+			console.log(keys.p+'这是通过keys调用的object对象')
+		}
+    }
+    
+    for(let value of m.values()){
+    	console.log(value)
+    }
+    
+    
+    for(let keys in obj){
+    	console.log(typeof keys+' 这是obj类型')
+    }
+    //当键为对象时，当内存地址不一样，值一样时，看成几个
+    //当键为对象时在map中，想要是同一个键，地址和值都要一样
+    m.set({b:1111},'2222')
+    let b={b:1111}//b和c的内存地址不一样
+    m.set(b,'1111')
+    let c={b:1111}
+    m.set(c,'1111')
+    
+    console.log(m)
+    //当键为值时在map中，当内存地址不一样，值一样时，会覆盖
+    let a1=1;
+    let a2=1;
+    m.set(a1,'1111')
+    m.set(a2,'1111')
+      console.log(m)
+    let a3=1;
+    let a4=2;//a3和a4值不相等，所以不会覆盖
+    m.set(a3,'1111')
+    m.set(a4,'1111')
+      console.log(m)
+</script>

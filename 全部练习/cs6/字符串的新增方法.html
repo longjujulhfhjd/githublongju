@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的新增方法</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+//	PadStart(字符长度，填充字符)   
+//	padWith()  填充字符串默认空格填充
+//	startsWith()   endsWith()   includes()  验证字符串含有字符以某个字符开始以某个字符结束
+//	repeat(n)  重复字符串 n遍
+//	trimStart()   trimEnd()  消除前后空格
+let str='kaghfvdjk'
+//console.log(str.includes('k'))//字符串中是否包含某个字符
+//console.log(str.startsWith('k'))//字符串中是否以某个字符开始
+//console.log(str.endsWith('k'))//字符串中是否以某个字符结束
+//console.log(str.repeat(2))//repeat(n)  重复字符串 n遍
+let start='ccc'
+console.log(start.padStart(6,'a'))//(字符长度，填充字符)   向前填充
+console.log(start.padEnd(6,'a'))//(字符长度，填充字符)  当长度够了，不需要填充会将其全部返回 ，向后填充
+let sr='     dfshadngblmgbtyj'
+console.log(sr)
+console.log('-------'+sr.trimStart())
+console.log('-------'+sr.trimEnd()+'------------')
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="../js/ajaxt.js"></script>
+<script>
+//	异步解决 ajax请求  异步处理：为了执行也一定的程序 为了拿到异步处理之后的返回值
+//思路：
+//1.新建一个ajax请求,并引用
+	//1.1创建ajax请求new XMLHttpRequest();
+	//1.2打开请求request.open(请求类型,请求地址,同步还是异步)
+	//1.3发送请求request.send(null) request.send(data)
+	//1.4request.onreadystatechange=function(){监听状态}）
+    //Promise解决异步的一个方案 ajax 异步处理就是为了  
+    
+    
+//  promise()是一个构造函数
+//resolve 回调方法 保存异步成功的数据
+//reject  回调方法  保存失败的数据
+	let p=new Promise(function(resolve,reject){
+		a=1
+		if(a<=1){
+			resolve({
+				success:true,
+				data:{
+					a:a,
+					b:2
+				}
+			})	
+		}else{
+			reject({
+				success:false
+			})
+		}	
+	})
+	//then
+	 p.then(function(r){
+	 	console.log(r)
+	 }).catch(function(e){
+	 	console.log(e)
+	 })
+</script>
